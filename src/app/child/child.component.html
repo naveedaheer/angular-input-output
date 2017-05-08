@@ -2,8 +2,6 @@
 <div>
   <button *ngIf = "parentData == false" type="" (click) = "parentData = true" >Show Parent Data</button>
   <button *ngIf = "parentData == true" (click) = "parentData = false" >Hide Parent Data</button>
-  <button *ngIf = "parentData == false" type="" (click) = "parentData = true" >Show Parent Data</button>
-  <button *ngIf = "parentData == true" (click) = "parentData = false" >Hide Parent Data</button>
   <div *ngIf="parentData == true">
     <br />
     
