@@ -1,1 +1,4 @@
-<app-child [dataFromParent] = "data" ></app-child>
+<app-child [dataFromParent] = "data" (notify) = "onNotifyClick($event)" ></app-child>
+<div>
+  <h4>data from child ----> {{dataFromChild}} </h4>
+</div>

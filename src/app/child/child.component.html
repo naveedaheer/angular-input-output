@@ -1,14 +1,16 @@
-<h3>Child Component</h3>
 <div>
-  <button *ngIf = "parentData == false" type="" (click) = "parentData = true" >Show Parent Data</button>
-  <button *ngIf = "parentData == true" (click) = "parentData = false" >Hide Parent Data</button>
+
+  <input type="text" [(ngModel)] = "childInput" >
+  <button [disabled] ="!childInput" (click)="sendToParent()" > Send To Parent </button>
+
+  <button *ngIf="parentData == false" type="" (click)="parentData = true">Show Parent Data</button>
+  <button *ngIf="parentData == true" (click)="parentData = false">Hide Parent Data</button>
+
   <div *ngIf="parentData == true">
     <br />
-    
-  <h4>Below data is coming from parent using @input()</h4>
- Name: {{dataFromParent.name}} <br />
- Email: {{dataFromParent.email}} <br />
- Age: {{dataFromParent.age}} <br />
- <span *ngIf="dataFromParent.developer == true " >Developer: Yes</span>
-</div>
+    <h4>Below data is coming from parent using @input()</h4>
+    Name: {{dataFromParent.name}} <br /> Email: {{dataFromParent.email}} <br /> Age: {{dataFromParent.age}} <br />
+    <span *ngIf="dataFromParent.developer == true ">Developer: Yes</span>
+  </div>
+
 </div>

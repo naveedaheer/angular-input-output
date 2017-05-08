@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ParentComponent implements OnInit {
 
+  dataFromChild:string = "";
   constructor() { }
 
   ngOnInit() {
@@ -18,5 +19,9 @@ export class ParentComponent implements OnInit {
     age: 21,
     developer: true
   }
+
+onNotifyClick(value:string): void{
+  this.dataFromChild = value;
+}
 
 }
